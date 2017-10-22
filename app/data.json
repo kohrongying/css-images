@@ -1,0 +1,14 @@
+{
+  "images": [
+  	{
+	    "src": "img/image-one.png",
+	    "alt": "Image one alt text",
+	    "link": "/koala.html"
+  	}, 
+  	{
+	    "src": "img/image-two.png",
+	    "alt": "Image two alt text",
+	    "link": "https://www.google.com"
+  	}
+
+	]}

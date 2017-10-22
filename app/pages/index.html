@@ -1,0 +1,30 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block title %}
+	Koala
+{% endblock %}
+
+
+{% block content %}
+
+<div class="jumbotron">
+	<div class="row">
+		<h1>HelloWorld</h1>
+	</div>
+
+	<div class="row">
+		{% for img in images %}
+		<div class="col-md-3">
+			<a href="{{ img.link }}">
+				<img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid">
+			</a>
+		</div>
+		{% endfor %}
+	</div>
+		
+</div>
+
+
+
+{% endblock %}
