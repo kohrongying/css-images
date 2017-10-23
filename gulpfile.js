@@ -5,7 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync');
 const nunjucksRender = require('gulp-nunjucks-render');
 const data = require('gulp-data');
-
+const imageResize = require('gulp-image-resize');
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/*.scss')
@@ -36,6 +36,15 @@ gulp.task('nunjucks', function() {
     }))
   .pipe(gulp.dest('app'))
 });
+
+gulp.task('crop', () => 
+  gulp.src('app/img/src/*.png')
+    .pipe(imageResize({
+      width: 800,
+      height: 800,
+      crop: true
+    }))
+    .pipe(gulp.dest('app/img/dist')));
 
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch

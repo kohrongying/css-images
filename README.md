@@ -5,7 +5,7 @@ Images made from pure CSS. It is truly the first time that I'm feeling quite exc
 - [ ] Learn Animations, Vue.js
 
 ### Come see!
-[Click](https://kohrongying.github.io/css-images/app/index.html)
+[Click Here!](https://kohrongying.github.io/css-images/app/index.html)
 
 ### Gulp
 Since gulp allows for an automated workflow, all you gotta do is run:

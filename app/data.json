@@ -2,12 +2,12 @@
 {
   "images": [
   	{
-	    "src": "img/koala-1.png",
+	    "src": "img/dist/koala.png",
 	    "alt": "Koala",
 	    "link": "https://kohrongying.github.io/css-images/app/koala.html"
   	}, 
   	{
-	    "src": "img/cactus-1.png",
+	    "src": "img/dist/cactus.png",
 	    "alt": "Cactus",
 	    "link": "https://kohrongying.github.io/css-images/app/cactus.html"
   	},
