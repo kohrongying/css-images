@@ -2,23 +2,26 @@
 {% extends "layout.nunjucks" %}
 
 {% block title %}
-	Koala
+	CSS Images
 {% endblock %}
 
 
 {% block content %}
 
-<div class="jumbotron">
-	<div class="row">
-		<h1>HelloWorld</h1>
+
+<div class="wrapper">
+	<div class="row page-title">
+		<h1>Pure CSS Images</h1>
 	</div>
 
 	<div class="row">
 		{% for img in images %}
-		<div class="col-md-3">
-			<a href="{{ img.link }}">
-				<img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid">
-			</a>
+		<div class="col-md-4 col-custom">
+			<div class="item"> 
+				<a href="{{ img.link }}">
+					<img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid img-custom">
+				</a>
+			</div>
 		</div>
 		{% endfor %}
 	</div>

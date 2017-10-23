@@ -1,16 +1,60 @@
+html {
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+	width: 50%;
+	margin: 100px auto;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	.page-title {
+		display: block;
+		text-align: center;
+		padding: 30px;
+	}
+
+	.col-custom {
+		padding:0;
+	}
+
+	.item {
+		overflow: hidden;		
+		img {
+			max-width: 100%;
+			transition: all 0.3s;
+			
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+}
 .box {
 	position: relative;
-	margin: auto;
 	display: block;	
-	margin-top: 8%;
 	width: 600px;
 	height: 420px;
+	flex-shrink: 0; /*prevent image from shrinking*/
 
 }
 
 @media all and (max-width: 600px) {
 	.box {
-		margin-top: 100px;
 		width: 250px;
 		height: 175px;
 	}

@@ -1,13 +1,19 @@
+
 {
   "images": [
   	{
-	    "src": "img/image-one.png",
-	    "alt": "Image one alt text",
-	    "link": "/koala.html"
+	    "src": "img/koala-1.png",
+	    "alt": "Koala",
+	    "link": "https://kohrongying.github.io/css-images/app/koala.html"
   	}, 
   	{
-	    "src": "img/image-two.png",
-	    "alt": "Image two alt text",
+	    "src": "img/cactus-1.png",
+	    "alt": "Cactus",
+	    "link": "https://kohrongying.github.io/css-images/app/cactus.html"
+  	},
+  	{
+	    "src": "img/koala-1.png",
+	    "alt": "Image three alt text",
 	    "link": "https://www.google.com"
   	}
 

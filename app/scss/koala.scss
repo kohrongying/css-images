@@ -2,160 +2,144 @@ body {
 	background-color: #25A9FC!important;
 }
 
-.box {
-	position: relative;
-	margin: auto;
-	display: block;	
-	margin-top: 8%;
-	width: 600px;
-	height: 420px;
-
-
-	.head {
-		position: absolute;
-		top: 16.5%; /*100-67=33/2*/
-		left: 25%; /*100-50=50/2*/
-		width: 50%;
-		height: 67%;
-		background-color: #A6BECF;
-		border-radius: 50%;
-	}
-
-	.head-copy { /*purpose to allow ears to appear behind*/
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: #A6BECF;
-		border-radius: 50%;
-		z-index: 2;
-	}
-
-	.left-ear {
-		position: absolute;
-		background-color: #A6BECF;
-		border-radius: 50%;
-		width: 60%;
-		height: 65%;
-		top: 5%;
-		left: -20%;
-		z-index: 1;
-	}
-
-	.left-ear__inner {
-		position: absolute;
-		background-color: white;
-		top: 10%;
-		left: 10%;
-		width: 80%;
-		height: 80%;
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	.right-ear {
-		position: absolute;
-		background-color: #A6BECF;
-		border-radius: 50%;
-		z-index: 1;
-		width: 60%;
-		height: 65%;
-		top: 5%;
-		right: -20%;
-	}
-
-	.right-ear__inner {
-		position: absolute;
-		background-color: white;
-		top: 10%;
-		left: 10%;
-		width: 80%;
-		height: 80%;
-		border-radius: 50%;
-		z-index: 1;
-	}
-
-	.left-eye {
-		position: absolute;
-		border-radius: 50%;
-		background-color: white;
-		width: 25%;
-		height: 25%;
-		top: 30%;
-		left: 25%;
-		z-index: 2
-	}
-
-	.left-eye .pupil {
-		position: absolute;
-		border-radius: 50%;
-		background-color: black;
-		width: 40%;
-		height: 40%;
-		top: 40%;
-		left: 40%;
-		z-index: 2;
-	}
-
-	.right-eye {
-		position: absolute;
-		border-radius: 50%;
-		background-color: white;
-		width: 25%;
-		height: 25%;
-		top: 30%;
-		right: 25%;
-		z-index: 2
-	}
-
-	.right-eye .pupil {
-		position: absolute;
-		border-radius: 50%;
-		background-color: black;
-		width: 40%;
-		height: 40%;
-		top: 40%;
-		left: 40%;
-		z-index: 2;
-	}
-
-	.nose {
-		position: absolute;
-		border-radius: 40%;
-		background-color: brown;
-		width: 15%;
-		height: 27%;
-		top: 45%;
-		left: 42.5%;
-		z-index:2;
-	}
-
-	.hair-left{
-	  position: absolute;
-	  top: -8%;
-	  left: 30%;
-	  width: 20%;
-	  height: 20%;
-	  background:  #A6BECF;
-	  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	}
-
-	.hair-right{
-	  position: absolute;
-	  top: -4%;
-	  left: 48%;
-	  width: 20%;
-	  height: 20%;
-	  background:  #A6BECF;
-	  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-	}
+.head {
+	position: absolute;
+	top: 16.5%; /*100-67=33/2*/
+	left: 25%; /*100-50=50/2*/
+	width: 50%;
+	height: 67%;
+	background-color: #A6BECF;
+	border-radius: 50%;
 }
 
-@media all and (max-width: 600px) {
-	.box {
-		margin-top: 100px;
-		width: 250px;
-		height: 175px;
-	}
+.head-copy { /*purpose to allow ears to appear behind*/
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #A6BECF;
+	border-radius: 50%;
+	z-index: 2;
 }
+
+.left-ear {
+	position: absolute;
+	background-color: #A6BECF;
+	border-radius: 50%;
+	width: 60%;
+	height: 65%;
+	top: 5%;
+	left: -20%;
+	z-index: 1;
+}
+
+.left-ear__inner {
+	position: absolute;
+	background-color: white;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.right-ear {
+	position: absolute;
+	background-color: #A6BECF;
+	border-radius: 50%;
+	z-index: 1;
+	width: 60%;
+	height: 65%;
+	top: 5%;
+	right: -20%;
+}
+
+.right-ear__inner {
+	position: absolute;
+	background-color: white;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	border-radius: 50%;
+	z-index: 1;
+}
+
+.left-eye {
+	position: absolute;
+	border-radius: 50%;
+	background-color: white;
+	width: 25%;
+	height: 25%;
+	top: 30%;
+	left: 25%;
+	z-index: 2
+}
+
+.left-eye .pupil {
+	position: absolute;
+	border-radius: 50%;
+	background-color: black;
+	width: 40%;
+	height: 40%;
+	top: 40%;
+	left: 40%;
+	z-index: 2;
+}
+
+.right-eye {
+	position: absolute;
+	border-radius: 50%;
+	background-color: white;
+	width: 25%;
+	height: 25%;
+	top: 30%;
+	right: 25%;
+	z-index: 2
+}
+
+.right-eye .pupil {
+	position: absolute;
+	border-radius: 50%;
+	background-color: black;
+	width: 40%;
+	height: 40%;
+	top: 40%;
+	left: 40%;
+	z-index: 2;
+}
+
+.nose {
+	position: absolute;
+	border-radius: 40%;
+	background-color: brown;
+	width: 15%;
+	height: 27%;
+	top: 45%;
+	left: 42.5%;
+	z-index:2;
+}
+
+.hair-left{
+  position: absolute;
+  top: -8%;
+  left: 30%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hair-right{
+  position: absolute;
+  top: -4%;
+  left: 48%;
+  width: 20%;
+  height: 20%;
+  background:  #A6BECF;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+

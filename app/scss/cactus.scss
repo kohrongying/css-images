@@ -1,0 +1,230 @@
+$off-white: #EBF5DF;
+$green: #629460;
+$light-green: #96BE8C;
+$dark-green: #243119;
+$brown: #423629;
+
+@mixin make-spike-tl($top, $left) {
+	position: absolute;
+	background-color: $dark-green;
+	width: 12%;
+	height: 2%;
+	left: $left;
+	top: $top;
+}
+
+@mixin make-dots-tl($top, $left) {
+	position: absolute;
+	background-color: $dark-green;
+	border-radius: 50%;
+	width: 5%;
+	height: 3%;
+	top: $top;
+	left: $left;
+		
+}
+
+body {
+	background-color: $off-white!important;
+}
+
+
+
+.pot {
+	position: absolute;
+	background-color: $brown;
+	clip-path: ellipse(50% 15% at 50% 50%);
+	width: 30%;
+	height: 30%;
+	bottom: -10%;
+	left: 35%;
+}
+
+.cactus-1-extension {
+	position: absolute;
+	background-color: $green;
+	width: 20%;
+	height: 30%;
+	bottom: 5%;
+	left: 40%;
+}
+
+.cactus-1 {
+	position: absolute;
+	background-color: $green;
+	width: 20%;
+	height: 60%;
+	bottom: 15%;
+	left: 40%;
+
+	.hemisphere {
+		position: absolute;
+		background-color: $green;
+		clip-path: circle(55% at 50% 100%);
+		width: 100%;
+		height: 40%;
+		top: -40%;
+	}
+
+	.spikes-1 {
+		@include make-spike-tl(0%,-5%);
+	}
+
+	.spikes-2 {
+		@include make-spike-tl(20%,-5%);
+	}
+	.spikes-3 {
+		@include make-spike-tl(0%,95%);
+	}
+	.spikes-4 {
+		@include make-spike-tl(-20%,10%);
+		transform: rotate(45deg);
+	}
+	.spikes-5 {
+		@include make-spike-tl(-20%,76%);
+		transform: rotate(-45deg);
+	}
+	.dots-1 {
+		@include make-dots-tl(10%,25%);
+	}
+	.dots-2 {
+		@include make-dots-tl(40%,55%);
+	}
+	.dots-3 {
+		@include make-dots-tl(60%,35%);
+	}
+	.dots-4 {
+		@include make-dots-tl(0%,75%);
+	}
+	.dots-5 {
+		@include make-dots-tl(80%,70%);
+	}
+	.left-arm {
+		position: absolute;
+		background-color: $green;
+		width: 30%;
+		height:30%;
+		left: -30%;
+		top: 50%;
+
+		.left-arm__side {
+			position: absolute;
+			background-color: $green;
+			clip-path: circle(100% at 100% 0);
+			height: 100%;
+			width: 209%;
+			left: -200%;
+		}
+		.left-arm__top {
+			position: absolute;
+			background-color: $green;
+			height: 50%;
+			width: 300%;
+			top: -40%;
+			left: -200%;
+		}
+		.left-arm__hemisphere {
+			clip-path: circle(55% at 50% 100%);
+			position: absolute;
+			background-color: $green;
+			width: 200%;
+			height: 80%;
+			top: -120%;
+			left:-200%;
+
+		}
+		.quadrant {
+			position: absolute;
+			background-color: $off-white;
+			clip-path: circle(100% at 100% 0%);
+			height: 50%;
+			width: 100%;
+			top:-45%;
+		}
+
+	}
+	.spikes-6 {
+		@include make-spike-tl(50%,-97%);
+	}
+	.spikes-7 {
+		@include make-spike-tl(74%,-70%);
+		transform: rotate(-45deg);
+	}
+	.spikes-8 {
+		@include make-spike-tl(45%,-30%);
+		transform: rotate(-45deg);
+	}
+	.spikes-9 {
+		@include make-spike-tl(23%,-65%);
+		transform: rotate(90deg);
+	}
+	.dots-6 {
+		@include make-dots-tl(40%,-60%);
+	}
+	.dots-7 {
+		@include make-dots-tl(60%,-40%);
+	}
+	
+	.right-arm {
+		position: absolute;
+		background-color: $green;
+		width: 30%;
+		height:30%;
+		right: -30%;
+		top: 25%;
+
+		.right-arm__side {
+			position: absolute;
+			background-color: $green;
+			clip-path: circle(100% at 0 0);
+			height: 100%;
+			width: 209%;
+			right: -200%;
+		}
+		.right-arm__top {
+			position: absolute;
+			background-color: $green;
+			height: 50%;
+			width: 300%;
+			top: -40%;
+			right: -200%;
+		}
+		.right-arm__hemisphere {
+			clip-path: circle(55% at 50% 100%);
+			position: absolute;
+			background-color: $green;
+			width: 200%;
+			height: 80%;
+			top: -120%;
+			right:-200%;
+
+		}
+		.quadrant {
+			position: absolute;
+			background-color: $off-white;
+			clip-path: circle(100% at 0 0);
+			height: 50%;
+			width: 100%;
+			top:-45%;
+		}
+	}
+	.spikes-10 {
+		@include make-spike-tl(50%,150%);
+		transform: rotate(45deg);
+	}
+	.spikes-11 {
+		@include make-spike-tl(-2%,160%);
+		transform: rotate(90deg);
+	}
+	.spikes-12 {
+		@include make-spike-tl(17%,119%);
+		transform: rotate(45deg);
+	}
+	.dots-8 {
+		@include make-dots-tl(40%,160%);
+	}
+	.dots-9 {
+		@include make-dots-tl(20%,140%);
+	}
+
+}
