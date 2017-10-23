@@ -1,0 +1,34 @@
+<!-- index.nunjucks -->
+{% extends "layout.nunjucks" %}
+
+{% block title %}
+	Washing Machine
+{% endblock %}
+
+{% block scripts %}
+	<link rel="stylesheet" href="css/washing-machine.css">
+{% endblock %}
+
+{% block content %}
+<div class="box">
+	<div class="base"></div>
+	<div class="basket">
+		<div class="towel"></div>
+	</div>
+	<div class="wm-whole">
+		<div class="button-1"></div>
+		<div class="button-2"></div>
+		<div class="button-long"></div>
+
+		<div class="wm-front-load">
+			<div class="circle">
+				<div class="inner-circle">
+					<div class="water-1"></div>
+					<div class="water-2"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+{% endblock %}

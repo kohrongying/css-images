@@ -12,9 +12,9 @@
 	    "link": "https://kohrongying.github.io/css-images/app/cactus.html"
   	},
   	{
-	    "src": "img/koala-1.png",
-	    "alt": "Image three alt text",
-	    "link": "https://www.google.com"
+	    "src": "img/dist/washing-machine.png",
+	    "alt": "Washing Machine",
+	    "link": "https://kohrongying.github.io/css-images/app/washing-machine.html"
   	}
 
-	]}
+]}

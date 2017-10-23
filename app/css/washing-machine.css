@@ -1,0 +1,122 @@
+body {
+  background-color: #809BCE !important; }
+
+.base {
+  position: absolute;
+  width: 50%;
+  height: 3%;
+  bottom: 0;
+  left: 25%;
+  border-radius: 20%;
+  background-color: #BED8D4; }
+
+.basket {
+  position: absolute;
+  width: 20%;
+  height: 30%;
+  bottom: 3%;
+  left: 57%;
+  background-color: #A7E8BD;
+  -webkit-clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+          clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%); }
+  .basket .towel {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    left: 25%;
+    top: -20%;
+    background-color: #FCBCB8;
+    border-radius: 20%; }
+
+.wm-whole {
+  position: absolute;
+  width: 40%;
+  height: 70%;
+  bottom: 3%;
+  left: 25%;
+  background-color: #474747;
+  border-radius: 10%; }
+  .wm-whole .button-1 {
+    position: absolute;
+    width: 8%;
+    height: 6%;
+    background-color: #BED8D4;
+    top: 8%;
+    right: 12%;
+    border-radius: 50%; }
+  .wm-whole .button-2 {
+    position: absolute;
+    width: 8%;
+    height: 6%;
+    background-color: #BED8D4;
+    top: 8%;
+    right: 25%;
+    border-radius: 50%; }
+  .wm-whole .button-long {
+    position: absolute;
+    width: 20%;
+    height: 6%;
+    background-color: #BED8D4;
+    top: 8%;
+    left: 12%;
+    border-radius: 30%; }
+  .wm-whole .wm-front-load {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    bottom: 10%;
+    background-color: #474747;
+    border-top: 3px solid #BED8D4;
+    border-bottom: 3px solid #BED8D4; }
+    .wm-whole .wm-front-load .circle {
+      position: absolute;
+      width: 70%;
+      height: 78%;
+      background-color: #BED8D4;
+      left: 15%;
+      top: 11%;
+      border-radius: 50%; }
+      .wm-whole .wm-front-load .circle .inner-circle {
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        background-color: #809BCE;
+        top: 15%;
+        left: 15%;
+        border-radius: 50%; }
+        .wm-whole .wm-front-load .circle .inner-circle .water-1 {
+          position: absolute;
+          background-color: #63D2FF;
+          width: 20%;
+          height: 20%;
+          top: 40%;
+          left: 40%;
+          border-radius: 50%;
+          -webkit-animation: orbit 4s linear infinite;
+                  animation: orbit 4s linear infinite; }
+        .wm-whole .wm-front-load .circle .inner-circle .water-2 {
+          position: absolute;
+          background-color: #63D2FF;
+          width: 20%;
+          height: 20%;
+          top: 40%;
+          left: 40%;
+          border-radius: 50%;
+          -webkit-animation: orbit 4s linear reverse infinite;
+                  animation: orbit 4s linear reverse infinite; }
+
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+            transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            transform: rotate(360deg) translateX(30px) rotate(-360deg); } }
+
+@keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
+            transform: rotate(0deg) translateX(30px) rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            transform: rotate(360deg) translateX(30px) rotate(-360deg); } }
