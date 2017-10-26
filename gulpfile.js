@@ -14,7 +14,7 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(autoprefixer()) // Passes it through gulp-autoprefixer
     .pipe(minifyCSS())
-    .pipe(gulp.dest('app/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.reload({
     	stream: true
     }));
@@ -24,7 +24,7 @@ gulp.task('sass', function() {
 gulp.task('browserSync', function() {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: 'docs'
     }
   })
 });
@@ -38,7 +38,7 @@ gulp.task('nunjucks', function() {
       	path: ['app/templates']
     }))
     .pipe(minifyHTML({collapseWhitespace: true}))
-  .pipe(gulp.dest('app'))
+  .pipe(gulp.dest('docs'))
 });
 
 gulp.task('crop', () => 
@@ -48,7 +48,7 @@ gulp.task('crop', () =>
       height: 800,
       crop: true
     }))
-    .pipe(gulp.dest('app/img/dist')));
+    .pipe(gulp.dest('docs/img')));
 
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch

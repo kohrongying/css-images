@@ -2,34 +2,34 @@
 {
   "images": [
   	{
-	    "src": "img/dist/koala.png",
+	    "src": "img/koala.png",
 	    "alt": "Koala",
-	    "link": "https://kohrongying.github.io/css-images/app/koala.html"
+	    "link": "/koala.html"
   	}, 
   	{
-	    "src": "img/dist/cactus.png",
+	    "src": "img/cactus.png",
 	    "alt": "Cactus",
-	    "link": "https://kohrongying.github.io/css-images/app/cactus.html"
+	    "link": "/cactus.html"
   	},
   	{
-	    "src": "img/dist/washing-machine.png",
+	    "src": "img/washing-machine.png",
 	    "alt": "Washing Machine",
-	    "link": "https://kohrongying.github.io/css-images/app/washing-machine.html"
+	    "link": "/washing-machine.html"
   	},
   	{
-	    "src": "img/dist/icebear.png",
+	    "src": "img/icebear.png",
 	    "alt": "Icebear",
-	    "link": "https://kohrongying.github.io/css-images/app/icebear.html"
+	    "link": "/icebear.html"
   	},
   	{
-	    "src": "img/dist/grizzlybear.png",
+	    "src": "img/grizzlybear.png",
 	    "alt": "Grizzlybear",
-	    "link": "https://kohrongying.github.io/css-images/app/grizzlybear.html"
+	    "link": "/grizzlybear.html"
   	},
   	{
-	    "src": "img/dist/pandabear.png",
+	    "src": "img/pandabear.png",
 	    "alt": "Pandabear",
-	    "link": "https://kohrongying.github.io/css-images/app/pandabear.html"
+	    "link": "/pandabear.html"
   	}
 
 ]}
