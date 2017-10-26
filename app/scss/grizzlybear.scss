@@ -1,7 +1,18 @@
-$white: #FDFBEF;
+$brown: #987861;
+$dark-red: #4D1F19;
+$pink: #E38E8D;
 
 body {
-	background-color: $white;
+	background-color: $brown;
+}
+
+@mixin make-teeth($left){
+	position: absolute;
+	width: 18%;
+	height: 30%;
+	left: $left;
+	clip-path: ellipse(50% 55% at 50% 0%);
+	background-color: white;
 }
 
 .left-eye {
@@ -32,30 +43,29 @@ body {
 	right: 44%;
 	background-color: black;
 	border-radius: 50%;
-}
 
-.mouth {
-	position: absolute;
-	top: 65%;
-	left: 55%;
-	width:10%; 
-	height: 10%;  
-	border:solid 3px #000;
-	border-color:#000 transparent transparent transparent;
-	border-radius: 100%/90% 90% 0 0;
-	transform: rotate(160deg);
+	.wrinkle {
+		position: absolute;
+		top: -40%;
+		left: 5%;
+		width: 90%; 
+		height: 90%;  
+		border:solid 3px #000;
+		border-color:#000 transparent transparent transparent;
+		border-radius: 100%/90% 90% 0 0;
+	}
 }
 
 .cheek {
 	position: absolute;
-	top: 65%;
-	left: 25%;
-	width:20%; 
+	top: 60%;
+	left: 60%;
+	width: 15%; 
 	height: 10%;  
 	border:solid 3px #000;
 	border-color:#000 transparent transparent transparent;
 	border-radius: 100%/90% 90% 0 0;
-	transform: rotate(-90deg);
+	transform: rotate(80deg);
 }
 
 .left-ear {
@@ -87,14 +97,46 @@ body {
 	position: absolute;
 	left: 22%;
 	width: 56%; 
-	height: 40%; 
+	height: 40%;  
 	border:solid 3px #000;
 	border-color:#000 transparent transparent transparent;
 	border-radius: 100%/90% 90% 0 0;
-	// transform: rotate(-90deg);
-
 }
 
+.mouth {
+	position: absolute;
+	top: 70%;
+	left: 35%;
+	width: 30%; 
+	height: 20%;  
+	// border: solid 3px black;
+ //    border-radius: 0% 0% 150% 150%;
+	clip-path: circle(50% at 50% 0);
+    background: $dark-red;
+
+    .tongue {
+    	position: absolute;
+    	width: 60%;
+    	height: 50%;
+    	top: 50%;
+    	left: 20%;
+    	border-radius:150% 150% 0% 0% ;
+    	background-color: $pink;
+    }
+
+    .teeth {
+    	@include make-teeth(15%);
+    }
+
+    .teeth-2 {
+    	@include make-teeth(35%);
+    }
+    .teeth-3 {
+    	@include make-teeth(55%);
+    }
+}
+
+
 // .box {
-// 	border: 1px solid black;
+// 	border: 1px solid white;
 // }

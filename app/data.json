@@ -20,6 +20,16 @@
 	    "src": "img/dist/icebear.png",
 	    "alt": "Icebear",
 	    "link": "https://kohrongying.github.io/css-images/app/icebear.html"
+  	},
+  	{
+	    "src": "img/dist/grizzlybear.png",
+	    "alt": "Grizzlybear",
+	    "link": "https://kohrongying.github.io/css-images/app/grizzlybear.html"
+  	},
+  	{
+	    "src": "img/dist/pandabear.png",
+	    "alt": "Pandabear",
+	    "link": "https://kohrongying.github.io/css-images/app/pandabear.html"
   	}
 
 ]}
