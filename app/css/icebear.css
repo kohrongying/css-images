@@ -1,0 +1,32 @@
+body {
+  background-color: #FDFBEF; }
+
+.left-eye {
+  position: absolute;
+  height: 6%;
+  width: 3%;
+  top: 30%;
+  left: 32%;
+  background-color: black;
+  border-radius: 50%; }
+
+.right-eye {
+  position: absolute;
+  height: 6%;
+  width: 3%;
+  top: 30%;
+  right: 32%;
+  background-color: black;
+  border-radius: 50%; }
+
+.nose {
+  position: absolute;
+  height: 8%;
+  width: 12%;
+  top: 40%;
+  right: 44%;
+  background-color: black;
+  border-radius: 50%; }
+
+.box {
+  border: 1px solid black; }

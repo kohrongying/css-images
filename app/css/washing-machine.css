@@ -107,16 +107,64 @@ body {
 
 @-webkit-keyframes orbit {
   from {
-    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
-            transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    -webkit-transform: rotate(0deg) translateX(110%) rotate(0deg);
+            transform: rotate(0deg) translateX(110%) rotate(0deg); }
   to {
-    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
-            transform: rotate(360deg) translateX(30px) rotate(-360deg); } }
+    -webkit-transform: rotate(360deg) translateX(110%) rotate(-360deg);
+            transform: rotate(360deg) translateX(110%) rotate(-360deg); } }
 
 @keyframes orbit {
   from {
-    -webkit-transform: rotate(0deg) translateX(30px) rotate(0deg);
-            transform: rotate(0deg) translateX(30px) rotate(0deg); }
+    -webkit-transform: rotate(0deg) translateX(110%) rotate(0deg);
+            transform: rotate(0deg) translateX(110%) rotate(0deg); }
   to {
-    -webkit-transform: rotate(360deg) translateX(30px) rotate(-360deg);
-            transform: rotate(360deg) translateX(30px) rotate(-360deg); } }
+    -webkit-transform: rotate(360deg) translateX(110%) rotate(-360deg);
+            transform: rotate(360deg) translateX(110%) rotate(-360deg); } }
+
+.detergent {
+  position: absolute;
+  top: -15%;
+  height: 15%;
+  width: 25%;
+  left: 60%; }
+  .detergent .bottom {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F7F9F9; }
+  .detergent .handle {
+    position: absolute;
+    width: 110%;
+    height: 200%;
+    background-color: #F7F9F9;
+    top: -100%;
+    -webkit-clip-path: ellipse(40% 50% at 50% 50%);
+            clip-path: ellipse(40% 50% at 50% 50%); }
+    .detergent .handle .cover {
+      width: 70%;
+      height: 80%;
+      position: absolute;
+      background-color: #809BCE;
+      -webkit-clip-path: ellipse(40% 50% at 50% 50%);
+              clip-path: ellipse(40% 50% at 50% 50%);
+      left: 15%;
+      top: 10%; }
+  .detergent .top {
+    position: absolute;
+    top: -100%;
+    height: 100%;
+    background-color: #F7F9F9;
+    width: 50%; }
+  .detergent .label {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    background-color: #FCBCB8; }
+  .detergent .cap {
+    position: absolute;
+    height: 20%;
+    top: -120%;
+    width: 40%;
+    background-color: #FCBCB8; }

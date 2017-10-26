@@ -132,6 +132,64 @@ body {
 }
 
 @keyframes orbit {
-	from { transform: rotate(0deg) translateX(30px) rotate(0deg); }
-    to   { transform: rotate(360deg) translateX(30px) rotate(-360deg); }
+	from { transform: rotate(0deg) translateX(110%) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(110%) rotate(-360deg); }
+}
+
+.detergent {
+	position: absolute;
+	top: -15%;
+	height: 15%;
+	width: 25%;
+	left: 60%;
+	// background-color: $whitish;
+
+	.bottom {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: $whitish;
+	}
+	.handle {
+		position: absolute;
+		width: 110%;
+		height: 200%;
+		background-color: $whitish;
+		top: -100%;
+		clip-path: ellipse(40% 50% at 50% 50%);
+	
+		.cover {
+			width: 70%;
+			height: 80%;
+			position: absolute;
+			background-color: $purple;
+			clip-path: ellipse(40% 50% at 50% 50%);
+			left: 15%;
+			top: 10%;
+		}
+	}
+	.top {
+		position: absolute;
+		top: -100%;
+		height: 100%;
+		background-color: $whitish;
+		width: 50%;
+	}
+
+	.label {
+		position: absolute;
+		width: 50%;
+		height: 50%;
+		top: 25%;
+		left: 25%;
+		background-color: $pink;
+	}
+
+	.cap {
+		position: absolute;
+		height: 20%;
+		top: -120%;
+		width: 40%;
+		background-color: $pink;
+	}
 }
