@@ -5,7 +5,7 @@ body {
   position: absolute;
   height: 6%;
   width: 3%;
-  top: 30%;
+  top: 40%;
   left: 32%;
   background-color: black;
   border-radius: 50%; }
@@ -14,7 +14,7 @@ body {
   position: absolute;
   height: 6%;
   width: 3%;
-  top: 30%;
+  top: 40%;
   right: 32%;
   background-color: black;
   border-radius: 50%; }
@@ -23,10 +23,65 @@ body {
   position: absolute;
   height: 8%;
   width: 12%;
-  top: 40%;
+  top: 50%;
   right: 44%;
   background-color: black;
   border-radius: 50%; }
 
-.box {
-  border: 1px solid black; }
+.mouth {
+  position: absolute;
+  top: 65%;
+  left: 55%;
+  width: 10%;
+  height: 10%;
+  border: solid 3px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/90% 90% 0 0;
+  -webkit-transform: rotate(160deg);
+          transform: rotate(160deg); }
+
+.cheek {
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  width: 20%;
+  height: 10%;
+  border: solid 3px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/90% 90% 0 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+
+.left-ear {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 10%;
+  height: 12%;
+  border: solid 3px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/200% 200% 0 0;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg); }
+
+.right-ear {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 10%;
+  height: 12%;
+  border: solid 3px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/200% 200% 0 0;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg); }
+
+.between-ears {
+  position: absolute;
+  top: 7%;
+  left: 23%;
+  width: 54%;
+  height: 18%;
+  border: solid 3px #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 100%/90% 90% 0 0; }

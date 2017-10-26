@@ -15,6 +15,11 @@
 	    "src": "img/dist/washing-machine.png",
 	    "alt": "Washing Machine",
 	    "link": "https://kohrongying.github.io/css-images/app/washing-machine.html"
+  	},
+  	{
+	    "src": "img/dist/icebear.png",
+	    "alt": "Icebear",
+	    "link": "https://kohrongying.github.io/css-images/app/icebear.html"
   	}
 
 ]}
