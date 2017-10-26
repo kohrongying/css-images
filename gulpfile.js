@@ -1,16 +1,19 @@
 // Requiring Gulp
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const autoprefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync');
-const nunjucksRender = require('gulp-nunjucks-render');
-const data = require('gulp-data');
-const imageResize = require('gulp-image-resize');
+const gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    browserSync = require('browser-sync'),
+    nunjucksRender = require('gulp-nunjucks-render'),
+    data = require('gulp-data'),
+    imageResize = require('gulp-image-resize'),
+    minifyCSS = require('gulp-clean-css'),
+    minifyHTML = require('gulp-htmlmin');
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/*.scss')
     .pipe(sass())
     .pipe(autoprefixer()) // Passes it through gulp-autoprefixer
+    .pipe(minifyCSS())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
     	stream: true
@@ -34,6 +37,7 @@ gulp.task('nunjucks', function() {
   	.pipe(nunjucksRender({
       	path: ['app/templates']
     }))
+    .pipe(minifyHTML({collapseWhitespace: true}))
   .pipe(gulp.dest('app'))
 });
 
@@ -48,14 +52,15 @@ gulp.task('crop', () =>
 
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch
-gulp.task('watch', ['browserSync','sass','nunjucks'], function() {
+gulp.task('watch', ['browserSync','sass','nunjucks','crop'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
   gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks']);
   gulp.watch('app/data.json',['nunjucks']);
+  gulp.watch('app/img/src/*.png', ['crop']);
   gulp.watch('app/index.html', browserSync.reload);
   // ... Other watchers
 });
 
-gulp.task('run', ['browserSync','sass','nunjucks'])
+gulp.task('run', ['browserSync','sass','nunjucks', 'crop'])
 
 gulp.task('default', ['run', 'watch']);
