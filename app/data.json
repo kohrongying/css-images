@@ -4,32 +4,32 @@
   	{
 	    "src": "img/koala.png",
 	    "alt": "Koala",
-	    "link": "/koala.html"
+	    "link": "/css-images/koala.html"
   	}, 
   	{
 	    "src": "img/cactus.png",
 	    "alt": "Cactus",
-	    "link": "/cactus.html"
+	    "link": "/css-images/cactus.html"
   	},
   	{
 	    "src": "img/washing-machine.png",
 	    "alt": "Washing Machine",
-	    "link": "/washing-machine.html"
+	    "link": "/css-images/washing-machine.html"
   	},
   	{
 	    "src": "img/icebear.png",
 	    "alt": "Icebear",
-	    "link": "/icebear.html"
+	    "link": "/css-images/icebear.html"
   	},
   	{
 	    "src": "img/grizzlybear.png",
 	    "alt": "Grizzlybear",
-	    "link": "/grizzlybear.html"
+	    "link": "/css-images/grizzlybear.html"
   	},
   	{
 	    "src": "img/pandabear.png",
 	    "alt": "Pandabear",
-	    "link": "/pandabear.html"
+	    "link": "/css-images/pandabear.html"
   	}
 
 ]}

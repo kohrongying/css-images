@@ -42,7 +42,7 @@ gulp.task('nunjucks', function() {
 });
 
 gulp.task('crop', () => 
-  gulp.src('app/img/src/*.png')
+  gulp.src('app/img/*.png')
     .pipe(imageResize({
       width: 800,
       height: 800,
