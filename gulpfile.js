@@ -7,8 +7,10 @@ const gulp = require('gulp'),
     data = require('gulp-data'),
     imageResize = require('gulp-image-resize'),
     minifyCSS = require('gulp-clean-css'),
-    minifyHTML = require('gulp-htmlmin');
-
+    minifyHTML = require('gulp-htmlmin'),
+    copy = require('gulp-copy'),
+    ghPages = require('gulp-gh-pages');
+ 
 gulp.task('sass', function() {
   return gulp.src('app/scss/*.scss')
     .pipe(sass())
@@ -41,6 +43,9 @@ gulp.task('nunjucks', function() {
   .pipe(gulp.dest('docs'))
 });
 
+/*
+To Crop Images
+*/
 gulp.task('crop', () => 
   gulp.src('app/img/*.png')
     .pipe(imageResize({
@@ -50,11 +55,18 @@ gulp.task('crop', () =>
     }))
     .pipe(gulp.dest('docs/img')));
 
+/*
+To Copy Index.html from docs to root folder
+*/
+gulp.task('copyIndex', () => 
+  gulp.src('docs/index.html')
+    .pipe(gulp.dest('./')));
+
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch
 gulp.task('watch', ['browserSync','sass','nunjucks','crop'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
-  gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks']);
+  gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks','copyIndex']);
   gulp.watch('app/data.json',['nunjucks']);
   gulp.watch('app/img/src/*.png', ['crop']);
   gulp.watch('app/index.html', browserSync.reload);
