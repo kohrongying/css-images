@@ -9,7 +9,8 @@ const gulp = require('gulp'),
     minifyCSS = require('gulp-clean-css'),
     minifyHTML = require('gulp-htmlmin'),
     copy = require('gulp-copy'),
-    ghPages = require('gulp-gh-pages');
+    ghPages = require('gulp-gh-pages'),
+    fs = require('fs');
  
 gulp.task('sass', function() {
   return gulp.src('app/scss/*.scss')
@@ -61,6 +62,41 @@ To Copy Index.html from docs to root folder
 gulp.task('copyIndex', () => 
   gulp.src('docs/index.html')
     .pipe(gulp.dest('./')));
+
+
+String.prototype.format = function () {
+  var i = 0, args = arguments;
+  return this.replace(/{}/g, function () {
+    return typeof args[i] != 'undefined' ? args[i++] : '';
+  });
+};
+
+gethtml = (name) => {
+  return '\
+{% extends "layout.nunjucks" %}\n\
+{% block title %}\n\
+  {}\n\
+{% endblock %}\n\
+{% block scripts %}\n\
+  <link rel="stylesheet" href="css/{}.css">\n\
+{% endblock %}\n\
+{% block content %}\n\
+  <div class="box">\n\
+  </div>\n\
+{% endblock %}'.format(name,name)
+}
+
+const getcss = "body{ background-color: $white!important;}"
+
+gulp.task('new', (callback) => {
+  let index = process.argv.indexOf('--name');
+  let name = process.argv[index+1];
+  fs.writeFile("app/scss/"+name+".scss", getcss);
+  fs.writeFile("app/pages/"+name+".html", gethtml(name), callback);
+});
+
+
+
 
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch
