@@ -14,7 +14,7 @@ const gulp = require('gulp'),
  
 gulp.task('sass', function() {
   return gulp.src('app/scss/*.scss')
-    .pipe(sass())
+    .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer()) // Passes it through gulp-autoprefixer
     .pipe(minifyCSS())
     .pipe(gulp.dest('docs/css'))
@@ -100,11 +100,10 @@ gulp.task('new', (callback) => {
 
 //watch files for changes
 //second parameter is array of tasks to be completed before Gulp runs watch
-gulp.task('watch', ['browserSync','sass','nunjucks','crop'], function() {
+gulp.task('watch', ['browserSync','sass','nunjucks'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
   gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks','copyIndex']);
   gulp.watch('app/data.json',['nunjucks']);
-  gulp.watch('app/img/src/*.png', ['crop']);
   gulp.watch('app/index.html', browserSync.reload);
   // ... Other watchers
 });
@@ -112,3 +111,12 @@ gulp.task('watch', ['browserSync','sass','nunjucks','crop'], function() {
 gulp.task('run', ['browserSync','sass','nunjucks', 'crop'])
 
 gulp.task('default', ['run', 'watch']);
+
+// gulp.task('default', function() {
+//     return gulp.src('src/images/*')
+//         .pipe(imagemin({
+//             progressive: true,
+//             use: [pngquant()]
+//         }))
+//         .pipe(gulp.dest('dist/images'));
+// });

@@ -1,1 +1,160 @@
-body{ background-color: $white!important;}
+$light-green: #BEC985;
+$yellow: #F5E04C;
+$green: #6BA04D;
+$brown: #C19E81;
+
+body{ background-color: $light-green!important;}
+
+.box {
+	transform: scale(1.5);
+}
+.head-lower {
+	position: absolute;
+	width: 30%;
+	height: 42%;
+	top: 44%;
+	left: 35%;
+	border-radius: 30%;
+	background-color: $yellow;
+	transform: rotate(45deg);
+}
+
+.head-upper {
+	position: absolute;
+	width: 28%;
+	height: 50%;
+	top: 30%;
+	left: 36%;
+	border-radius: 50% 50% 50% 50%/60% 60% 30% 30%;
+	background-color: $light-green;
+}
+
+.nose {
+	position: absolute;
+	width: 10%;
+	height: 12%;
+	top: 70%;
+	left: 44%;
+	background-color: $light-green;
+	transform: rotate(45deg);
+	.dot {
+		position: absolute;
+		width: 5%;
+		height: 10%;
+		top: -50%;
+		left: 20%;
+		background-color: black;
+		border-radius: 50%;
+		-webkit-box-reflect: left 700%;
+		transform: rotate(-45deg);
+	}
+}
+
+.eye {
+	position: absolute;
+	width: 4%;
+	height: 12%;
+	background-color: $yellow;
+	top: 55%;
+	left: 38%;
+	border-radius: 50%;
+	-webkit-box-reflect: right 400%;
+
+	.black-part {
+		position: absolute;
+		width: 60%;
+		height: 70%;
+		right: 0;
+		top: 20%;
+		background-color: black;
+		border-radius: 50%;
+
+		.pupil {
+			position: absolute;
+			width: 40%;
+			height: 40%;
+			right: 10%;
+			top: 30%;
+			background-color: $yellow;
+			border-radius: 50%;
+		}
+	}
+}
+
+.hair {
+	position: absolute;
+	top: 30%;
+	left: 45%;
+	width: 10%;
+	height: 8%;
+	border-radius: 100% 100% 0 0;
+	background-color: $brown;
+
+	.strand-1 {
+		position: absolute;
+		top: 45%;
+		left: -33%;
+		width: 50%;
+		height: 100%;
+		background-color: $brown;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		transform: rotate(240deg);
+	}
+
+	.strand-2 {
+		position: absolute;
+		top: 90%;
+		left: 15%;
+		width: 70%;
+		height: 80%;
+		background-color: $brown;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		transform: rotate(180deg);
+	}
+	.strand-3 {
+		position: absolute;
+		top: 45%;
+		right: -35%;
+		width: 50%;
+		height: 100%;
+		background-color: $brown;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+		transform: rotate(-240deg);
+	}
+}
+
+.stalk {
+	position: absolute;
+	top: 17%;
+	left: 46%;
+	width: 8%;
+	height: 14%;
+	clip-path: polygon(50% 0, 60% 0, 70% 100%, 40% 100%);
+	background-color: $brown;
+}
+
+.left-leaf {
+	position: absolute;
+	clip-path: ellipse(24% 49% at 50% 50%);
+	top: 10%;
+	left: 42%;
+	width: 8%;
+	height: 15%;
+	background-color: $green;
+	transform: rotate(-45deg);
+}
+
+.right-leaf {
+	position: absolute;
+	clip-path: ellipse(24% 49% at 50% 50%);
+	top: 10%;
+	right: 41%;
+	width: 8%;
+	height: 15%;
+	background-color: $green;
+	transform: rotate(45deg);
+}
+
+// .box {
+// 	border: 1px solid black;
+// }

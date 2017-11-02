@@ -30,6 +30,11 @@
 	    "src": "img/pandabear.png",
 	    "alt": "Pandabear",
 	    "link": "/css-images/pandabear.html"
+  	},
+  	{
+  		"src": "img/turtwig.png",
+  		"alt": "Turtwig",
+  		"link": "/css-images/turtwig.html"
   	}
 
 ]}
