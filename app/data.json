@@ -4,42 +4,42 @@
   	{
 	    "src": "img/koala.png",
 	    "alt": "Koala",
-	    "link": "/css-images/koala.html"
+	    "link": "koala.html"
   	}, 
   	{
 	    "src": "img/cactus.png",
 	    "alt": "Cactus",
-	    "link": "/css-images/cactus.html"
+	    "link": "cactus.html"
   	},
   	{
 	    "src": "img/washing-machine.png",
 	    "alt": "Washing Machine",
-	    "link": "/css-images/washing-machine.html"
+	    "link": "washing-machine.html"
   	},
   	{
 	    "src": "img/icebear.png",
 	    "alt": "Icebear",
-	    "link": "/css-images/icebear.html"
+	    "link": "icebear.html"
   	},
   	{
 	    "src": "img/grizzlybear.png",
 	    "alt": "Grizzlybear",
-	    "link": "/css-images/grizzlybear.html"
+	    "link": "grizzlybear.html"
   	},
   	{
 	    "src": "img/pandabear.png",
 	    "alt": "Pandabear",
-	    "link": "/css-images/pandabear.html"
+	    "link": "pandabear.html"
   	},
   	{
   		"src": "img/turtwig.png",
   		"alt": "Turtwig",
-  		"link": "/css-images/turtwig.html"
+  		"link": "turtwig.html"
   	},
   	{
   		"src": "img/astronaut.png",
   		"alt": "astronaut",
-  		"link": "/css-images/astronaut.html"
+  		"link": "astronaut.html"
   	}
 
 ]}

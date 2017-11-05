@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Pacifico');
+
 html {
   box-sizing: border-box;
   min-height: 100%;
@@ -20,6 +22,7 @@ html {
 		display: block;
 		text-align: center;
 		padding: 30px;
+		font-family: 'Pacifico';
 	}
 
 	.col-custom {
