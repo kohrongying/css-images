@@ -35,6 +35,11 @@
   		"src": "img/turtwig.png",
   		"alt": "Turtwig",
   		"link": "/css-images/turtwig.html"
+  	},
+  	{
+  		"src": "img/astronaut.png",
+  		"alt": "astronaut",
+  		"link": "/css-images/astronaut.html"
   	}
 
 ]}

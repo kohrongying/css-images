@@ -1,6 +1,9 @@
 html {
   box-sizing: border-box;
-  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 *, *:before, *:after {
@@ -37,20 +40,12 @@ html {
 
 }
 
-body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100%;
-
-}
 .box {
 	position: relative;
 	display: block;	
 	width: 600px;
 	height: 420px;
 	flex-shrink: 0; /*prevent image from shrinking*/
-
 }
 
 @media all and (max-width: 600px) {

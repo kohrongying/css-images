@@ -104,7 +104,7 @@ gulp.task('watch', ['browserSync','sass','nunjucks'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
   gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks','copyIndex']);
   gulp.watch('app/data.json',['nunjucks']);
-  gulp.watch('app/index.html', browserSync.reload);
+  gulp.watch('docs/*.html', browserSync.reload);
   // ... Other watchers
 });
 

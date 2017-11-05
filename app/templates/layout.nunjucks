@@ -8,7 +8,7 @@
 	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
 	<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
 	
-	<title>{% block title %} {% endblock %}</title>
+	<title>{{ title }}</title>
  	
  	<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
 	<!-- Bootstrap CSS -->
@@ -23,10 +23,6 @@
 
 </head>
 <body>
-
-  <!-- You write code for this content block in another file -->
-  {% block content %} {% endblock %}
-
-
+	{% block content %} {% endblock %}
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!-- layout.nunjucks --><!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><meta content="IE=edge" http-equiv="X-UA-Compatible"><meta content="width=device-width,initial-scale=1,shrink-to-fit=no" name="viewport"><title>Astronaut</title><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"><!-- Bootstrap CSS --><link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet"><link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/astronaut.css"><script crossorigin="anonymous" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" src="https://code.jquery.com/jquery-3.2.1.min.js"></script><script crossorigin="anonymous" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script><script crossorigin="anonymous" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script></head><body><canvas id="starry-night"></canvas><div class="planet"><div></div><div></div></div><div class="box"><div class="tank"><div class="square"></div><div class="circle"><div></div><div></div></div><div class="left-arm"></div><div class="right-arm"><div class="forearm"></div></div><div class="helmet"><div class="visor"></div></div><div class="left-leg"></div><div class="right-leg"></div></div></div><script type="text/javascript">const canvas = document.getElementById('starry-night');
+    const clientWidth = document.body.clientWidth;
+    const clientHeight = document.body.clientHeight;
+    canvas.setAttribute('width', clientWidth);
+    canvas.setAttribute('height', clientHeight);
+    const ctx = canvas.getContext('2d');
+
+    const getRandX = () => Math.random() * clientWidth
+    const getRandY = () => Math.random() * clientHeight
+    const getRandRadius = (max,min) => {
+      return Math.random() * (max-min) + min
+    }
+    const drawStar = (num) => {
+      ctx.fillStyle = 'white';
+      
+      for(let i=0;i<num;i++){
+        ctx.beginPath();
+        //arc(x_coor of centre, y_coor of centre, radius, startAngle, endAngle, anticlockwise)
+        ctx.arc(getRandX(),getRandY(),getRandRadius(3,0),0,Math.PI*2,0);
+        ctx.fill();
+      }
+    }
+
+    drawStar(100);
+
+    window.requestAnimationFrame = function() {
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        function(f) {
+          window.setTimeout(f,1e3/60);
+        }
+    }();
+
+    //Velocity X
+    let vx = 0;
+
+    const img = new Image;
+
+    img.src = canvas.toDataURL();
+
+    (function renderGame() {
+      window.requestAnimationFrame(renderGame);
+      
+      ctx.clearRect(0, 0, clientWidth, clientHeight);
+      
+      ctx.fillStyle = '#333';
+      ctx.fillRect(0, 0, clientWidth, clientHeight);
+      
+      ctx.drawImage(img, vx, 50);
+      ctx.drawImage(img, img.width-Math.abs(vx), 50);
+      
+      if (Math.abs(vx) > img.width) {
+        vx = 0;
+      }
+      
+      vx -= 1;
+    }());</script></body></html>
