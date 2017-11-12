@@ -1,0 +1,346 @@
+$terra-cotta: #E87461; //reddish
+$pistachio: #A1CF6B;
+$med-spring-bud: #D5D887;
+$mantis: #7AC74F;
+$pastel-blue: #B3D6C6;
+$beige: #F6F1D1;
+$brown: #360A14;
+$green: #04A777;
+$orange: #FB8B24;
+$purple: #A09CB0;
+
+body{ 
+	background-color: $pastel-blue!important;
+	min-width: 100%;
+}
+
+@mixin make-circle($radius, $color) {
+	position: absolute;
+	background-color: $color;
+	border-radius: 50%;
+	width: calc(#{$radius} * 2);
+	height: calc(#{$radius} * 2);
+	top: calc(50% - #{$radius});
+	left: calc(50% - #{$radius});
+}
+
+@mixin make-seed-tl($top, $left){
+	position: absolute;
+	background-color: black;
+	border-radius: 50%;
+	width: 8%;
+	height: 8%;
+	top: $top;
+	left: $left;
+	clip-path: ellipse(25% 50% at 50% 50%);
+}
+
+@mixin make-triangle-tl($top, $left){
+	position: absolute;
+	background-color: $mantis;
+	width: 20%;
+	height: 20%;
+	top: $top;
+	left: $left;
+	clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+@mixin make-stalk($color){
+	position: absolute;
+	width: 5%;
+	height: 18%;
+	left: 46%;
+	top: -8%;
+	background-color: $color;
+}
+
+.fruit {
+	height: 50vh;
+	padding: 20px 80px;
+	background-color: $pastel-blue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.circle {
+		position: absolute;
+		width: 160px;
+		height: 160px;
+		background-color: yellow;
+		border-radius: 50%;
+	}
+}
+
+#apple {
+	.circle {
+		background-color: $terra-cotta;
+
+		.inner-white {
+			@include make-circle(45%, $beige);
+		}
+
+		.stalk {
+			@include make-stalk($brown);
+		}
+		.leaf {
+			position: absolute;
+			width: 20%;
+			height: 20%;
+			left: 48%;
+			top: -8%;
+			background-color: $mantis;
+			clip-path: ellipse(25% 50% at 50% 50%);
+			transform: rotate(35deg);
+		}
+		.seeds {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 40%;
+			left: 35%;
+
+			div {
+				width: 5%;
+				height: 5%;
+				border-radius: 50%;
+				background-color: $brown;
+				margin-bottom: 10%;
+				-webkit-box-reflect: right 400%;
+			}
+		}
+	}
+}
+
+#kiwi {
+	.circle {
+		background-color: $brown;
+	}
+	.inner-green {
+		@include make-circle(45%, $mantis);
+
+		.seeds {
+			position: absolute;
+			width: 40%;
+			height: 40%;
+			left: 30%;
+			top: 30%;
+			border: 5px dotted black;
+			border-radius: 50%;
+
+			.core {
+				@include make-circle(45%, $med-spring-bud);
+			}
+		}
+
+	}
+}
+
+#watermelon {
+	.circle {
+		background-color: $green;
+		.inner-white {
+			@include make-circle(45%, $beige);
+			.inner-red {
+				@include make-circle(45%, $terra-cotta);
+
+				.seeds {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					
+					div:nth-child(1) {
+						@include make-seed-tl(20%, 30%);
+						transform: rotate(-40deg);
+						-webkit-box-reflect: right 200%;
+					}
+					div:nth-child(2) {
+						@include make-seed-tl(40%, 30%);
+						transform: rotate(-60deg);
+						-webkit-box-reflect: right 200%;
+					}
+					div:nth-child(3) {
+						@include make-seed-tl(60%, 30%);
+						transform: rotate(70deg);
+					}
+					div:nth-child(4) {
+						@include make-seed-tl(80%, 30%);
+						transform: rotate(50deg);
+					}
+					div:nth-child(5) {
+						@include make-seed-tl(20%, 60%);
+						transform: rotate(50deg);
+					}
+					div:nth-child(6) {
+						@include make-seed-tl(40%, 60%);
+						transform: rotate(70deg);
+					}
+					div:nth-child(7) {
+						@include make-seed-tl(60%, 60%);
+						transform: rotate(-60deg);
+					}
+					div:nth-child(8) {
+						@include make-seed-tl(80%, 60%);
+						transform: rotate(-40deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+#orange {
+	.circle {
+		background-color: $orange;
+		.inner-white {
+			@include make-circle(45%, $beige);
+			
+			.inner-orange {
+				@include make-circle(45%, transparent);
+
+				@for $i from 0 through 7 {
+					$step: 51 * $i;
+					div:nth-child(#{$i + 1}) {
+						@include make-circle(50%, $orange);
+						clip-path: polygon(100% 0, 53% 50%, 100% 50%);
+					    transform: rotate( $step+deg) ;
+					 }
+				}
+			}
+
+		}
+	}
+}
+
+#grape {
+	.circle {
+		background-color: purple; 
+		.inner-purple {
+			@include make-circle(45%, $purple);
+			.seeds {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				div:first-child {
+					position: absolute;
+					width: 10%;
+					height: 20%;
+					top: 40%;
+					left: 30%;
+					background-color: white;
+					clip-path: ellipse(25% 50% at 50% 50%);
+				}
+				div:last-child {
+					position: absolute;
+					width: 10%;
+					height: 20%;
+					top: 50%;
+					left: 60%;
+					background-color: white;
+					clip-path: ellipse(25% 50% at 50% 50%);
+				}
+			}
+		}
+	}
+}
+
+#durian {
+	.circle {
+		background-color: $mantis;
+		
+		@for $i from 0 through 4 {
+			$step: 90 * $i;
+			
+			.spikes:nth-child(#{$i+1}) {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+
+				div:first-child {
+					@include make-triangle-tl(-15%,35%);
+				}
+				div:nth-child(2){
+					@include make-triangle-tl(-5%,8%);
+					transform: rotate(-30deg);
+				}
+				div:nth-child(3){
+					@include make-triangle-tl(15%,-10%);
+					transform: rotate(-60deg);
+				}
+				transform: rotate($step+deg);
+			}
+		}
+		.stalk {
+			@include make-stalk($brown);
+		}
+
+		.inner-white {
+			@include make-circle(45%, $beige);
+
+			.flesh {
+				@include make-circle(40%, transparent);
+
+				@for $i from 0 through 4 {
+					$step: 90 * $i;
+					div:nth-child(#{$i+1}){
+						@include make-circle(50%, $med-spring-bud);
+						clip-path: polygon(55% 0, 100% 0, 100% 45%, 55% 45%);
+						transform: rotate($step+deg);
+					}
+				}
+			}
+		}
+	}
+}
+
+#melon {
+	.circle {
+		background-color: $med-spring-bud;
+		border: 5px $beige solid;
+	}
+	canvas#melon-canvas {
+		clip-path: circle(50% at 50% 50%);
+	}
+	.stalk {
+		@include make-stalk($beige);
+	}
+}
+
+#rambutan {
+	z-index: -2;
+	.holder {
+		width: 100%;
+		height: 100%;
+
+		@for $i from 0 through 11 {
+			$step: 30 * $i;
+			div.hair:nth-child(#{$i+1}){
+				position: absolute;
+				background-color: $terra-cotta;
+				width: 180px;
+				height: 1%;
+				top:50%;
+				left: calc(50% - 90px);
+				z-index: -1;
+				transform: rotate($step+deg);
+			}
+		}
+	}
+	.circle {
+		// display: none;
+		background-color: $beige;
+		border: 5px $terra-cotta solid;
+		top: calc(50% - 80px);
+		left: calc(50% - 80px);
+		
+		.seed {
+			position: absolute;
+			width: 40%;
+			height: 60%;
+			top: 20%;
+			left: 30%;
+			background-color: lightgray;
+			border-radius: 50%;
+		
+		}
+	}
+}

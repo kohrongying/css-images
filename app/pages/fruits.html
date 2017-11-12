@@ -1,0 +1,159 @@
+{% extends "layout.nunjucks" %}
+{% block title %}
+  fruits
+{% endblock %}
+{% block scripts %}
+  <link rel="stylesheet" href="css/fruits.css">
+{% endblock %}
+{% block content %}
+  <div class="container">
+	  <div class="row">
+	  	<div class="col-sm-3 fruit" id="apple">
+	  		<div class="circle">
+	  			<div class="inner-white"></div>
+	  			<div class="seeds">
+	  				<div></div>
+	  				<div></div>
+	  				<div></div>
+	  			</div>
+	  			<div class="stalk"></div>
+	  			<div class="leaf"></div>
+	  		</div>
+	  	</div>
+		<div class="col-sm-3 fruit" id="kiwi">
+			<div class="circle">
+				<div class="inner-green">
+					<div class="fibre"></div>
+					<div class="seeds">
+						<div class="core"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="col-sm-3 fruit" id="watermelon">
+			<div class="circle">
+				<div class="inner-white">
+					<div class="inner-red">
+						<div class="seeds">
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-sm-3 fruit" id="orange">
+			<div class="circle">
+				<div class="inner-white">
+					<div class="inner-orange">
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+
+	  <div class="row">
+	  	<div class="col-sm-3 fruit" id="grape">
+  			<div class="circle">
+  				<div class="inner-purple">
+  					<div class="seeds">
+  						<div></div>
+  						<div></div>
+  					</div>
+  				</div>
+  			</div>
+	  	</div>
+	 <div class="col-sm-3 fruit" id="melon">
+		<div class="circle">
+			<div class="stalk"></div>
+			<canvas id="melon-canvas"></canvas>
+		</div>
+	</div>
+	<div class="col-sm-3 fruit" id="durian">
+		<div class="circle">
+			<div class="spikes">
+				<div></div><div></div><div></div>
+			</div>
+			<div class="spikes">
+				<div></div><div></div><div></div>
+			</div>
+			<div class="spikes">
+				<div></div><div></div><div></div>
+			</div>
+			<div class="spikes">
+				<div></div><div></div><div></div>
+			</div>
+			<div class="stalk"></div>
+			<div class="inner-white">
+				<div class="flesh">
+					<div></div><div></div><div></div><div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	  			
+	  	<div class="col-sm-3 fruit" id="rambutan">
+	  		<div class="holder">
+	  			<div class="hair"></div><div class="hair"></div><div class="hair"></div><div class="hair"></div><div class="hair"></div>
+	  			<div class="hair"></div><div class="hair"></div><div class="hair"></div><div class="hair"></div>
+	  			<div class="hair"></div><div class="hair"></div><div class="hair"></div>
+	  			
+		  		<div class="circle">
+		  			
+		  				<div class="seed"></div>
+		  			
+		  			
+		  		</div>
+	  		</div>
+	  	</div>
+	  </div>
+  </div>
+
+  <script type="text/javascript">
+  	const canvas = document.getElementById('melon-canvas');
+  
+    const clientWidth = canvas.parentElement.clientWidth;
+    const clientHeight = canvas.parentElement.clientHeight;
+    canvas.setAttribute('width', clientWidth);
+    canvas.setAttribute('height', clientHeight);
+ 
+    const ctx = canvas.getContext('2d');
+   
+    const radius = clientWidth/2;
+    let angle = 0;
+    let x_start, y_start;
+    const rand = (min,max) => {
+    	return Math.random()*(max-min)+min;
+    }
+    const diff = (clientWidth*1.5-160)/2;
+    console.log(diff);
+    for (let i= 0; i<36; i++) {
+	    ctx.beginPath();
+	    x_start = radius*(1-Math.cos(angle));
+	    y_start = radius*(1-Math.sin(angle));
+	    ctx.moveTo(x_start,y_start);
+	    ctx.lineTo(canvas.width*rand(0.3,1),canvas.height*rand(0.3,1));
+	    ctx.strokeStyle= "#F6F1D1";
+	    ctx.lineWidth = 3;
+	    ctx.stroke();
+	    angle += Math.PI / 18;
+	}
+
+  </script>
+{% endblock %}

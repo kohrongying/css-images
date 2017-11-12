@@ -1,45 +1,49 @@
 
 {
   "images": [
+    {
+      "src": "img/fruits.png",
+      "alt": "Fruits",
+      "link": "fruits.html"
+    }, 
   	{
+      "src": "img/astronaut.png",
+      "alt": "astronaut",
+      "link": "astronaut.html"
+    },
+    {
+      "src": "img/turtwig.png",
+      "alt": "Turtwig",
+      "link": "turtwig.html"
+    },
+    {
+      "src": "img/pandabear.png",
+      "alt": "Pandabear",
+      "link": "pandabear.html"
+    },
+    {
+      "src": "img/grizzlybear.png",
+      "alt": "Grizzlybear",
+      "link": "grizzlybear.html"
+    },
+    {
+      "src": "img/icebear.png",
+      "alt": "Icebear",
+      "link": "icebear.html"
+    },
+    {
+      "src": "img/washing-machine.png",
+      "alt": "Washing Machine",
+      "link": "washing-machine.html"
+    },
+    {
+      "src": "img/cactus.png",
+      "alt": "Cactus",
+      "link": "cactus.html"
+    },
+    {
 	    "src": "img/koala.png",
 	    "alt": "Koala",
 	    "link": "koala.html"
-  	}, 
-  	{
-	    "src": "img/cactus.png",
-	    "alt": "Cactus",
-	    "link": "cactus.html"
-  	},
-  	{
-	    "src": "img/washing-machine.png",
-	    "alt": "Washing Machine",
-	    "link": "washing-machine.html"
-  	},
-  	{
-	    "src": "img/icebear.png",
-	    "alt": "Icebear",
-	    "link": "icebear.html"
-  	},
-  	{
-	    "src": "img/grizzlybear.png",
-	    "alt": "Grizzlybear",
-	    "link": "grizzlybear.html"
-  	},
-  	{
-	    "src": "img/pandabear.png",
-	    "alt": "Pandabear",
-	    "link": "pandabear.html"
-  	},
-  	{
-  		"src": "img/turtwig.png",
-  		"alt": "Turtwig",
-  		"link": "turtwig.html"
-  	},
-  	{
-  		"src": "img/astronaut.png",
-  		"alt": "astronaut",
-  		"link": "astronaut.html"
   	}
-
 ]}
