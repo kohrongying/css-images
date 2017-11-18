@@ -9,7 +9,8 @@ const gulp = require('gulp'),
     minifyCSS = require('gulp-clean-css'),
     minifyHTML = require('gulp-htmlmin'),
     copy = require('gulp-copy'),
-    ghPages = require('gulp-gh-pages'),
+    ghPages = require('gulp-gh-pages'), //unused
+    sitemap = require('gulp-sitemap'),
     fs = require('fs');
  
 gulp.task('sass', function() {
@@ -63,6 +64,18 @@ gulp.task('copyIndex', () =>
   gulp.src('docs/index.html')
     .pipe(gulp.dest('./')));
 
+
+/*
+To create sitemap
+*/
+gulp.task('sitemap', () =>
+  gulp.src('docs/**/*.html', {
+    read: false
+  })
+    .pipe(sitemap({
+      siteUrl: 'https://kohrongying.github.io/css-images'
+    }))
+    .pipe(gulp.dest('docs')));
 
 String.prototype.format = function () {
   var i = 0, args = arguments;
