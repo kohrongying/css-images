@@ -99,7 +99,7 @@ gethtml = (name) => {
 {% endblock %}'.format(name,name)
 }
 
-const getcss = "body{ background-color: $white!important;}"
+const getcss = "body{ background-color: white!important;}"
 
 gulp.task('new', (callback) => {
   let index = process.argv.indexOf('--name');
