@@ -102,7 +102,7 @@ gulp.task('new', (callback) => {
 //second parameter is array of tasks to be completed before Gulp runs watch
 gulp.task('watch', ['browserSync','sass','nunjucks'], function() {
   gulp.watch('app/scss/*.scss', ['sass']);
-  gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks','copyIndex']);
+  gulp.watch('app/pages/*.+(html|nunjucks)', ['nunjucks']);
   gulp.watch('app/data.json',['nunjucks']);
   gulp.watch('docs/*.html', browserSync.reload);
   // ... Other watchers
