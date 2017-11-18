@@ -7,6 +7,7 @@
   	<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
 	<meta content='IE=edge' http-equiv='X-UA-Compatible'>
 	<meta content='width=device-width, initial-scale=1, shrink-to-fit=no' name='viewport'>
+	<meta name='description' content='Images made with pure CSS. Rong Ying is keen in creating interesting and animated objects with the use of CSS and JS'>
 	
 	<title>{{ title }}</title>
  	
@@ -14,12 +15,11 @@
 	<!-- Bootstrap CSS -->
 	<link crossorigin='anonymous' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' rel='stylesheet'>
 	<link rel="stylesheet" href="css/styles.css">
-	{% block scripts %}{% endblock %}
-
-
+	
 	<script crossorigin='anonymous' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
 	<script crossorigin='anonymous' integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb' src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js'></script>
 	<script crossorigin='anonymous' integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+	{% block scripts %}{% endblock %}
 
 </head>
 <body>
