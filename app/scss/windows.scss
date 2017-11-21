@@ -1,1 +1,186 @@
-body{ background-color: white!important;}
+body{ 
+	min-width: 100%;
+}
+
+@mixin make-centered-rect-wh($width, $height, $color) {
+	position: absolute;
+	background-color: $color;
+	width: $width;
+	height: $height;
+	top: calc(50% - calc(#{$height} / 2));
+	left: calc(50% - calc(#{$width} / 2));
+}
+
+.window {
+	background-color: lightblue;
+	height: 100vh;
+	// padding: 20px 80px;
+}
+
+.window-title {
+	position: absolute;
+	width: 100%;
+	bottom: 10%;
+	p {
+		color: #ccc;
+	}
+}
+
+#window-1 {
+	background-color: #D2E7E0; //lightgreen
+
+	.top {
+		position: absolute;
+		width: 45%;
+		height: 2%;
+		top: 20%;
+		left: 27.5%;
+		background-color:#915038; //brown
+
+		.trapezoid {
+			position: absolute;
+			width: 100%;
+			height: 155%;
+			bottom: -155%;
+			clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+			background-color: orange;
+		}
+	}
+	.frame {
+		@include make-centered-rect-wh(40%, 50%, #AC7D7D); //coral
+
+		.inner-frame {
+			@include make-centered-rect-wh(90%, 90%, #A7BF9B);
+			
+
+			.inner-2-frame {
+				@include make-centered-rect-wh(90%, 90%, #B9CEA6);
+
+				.inner-3-frame {
+					@include make-centered-rect-wh(90%, 90%, #5C9C9C); //teal
+				
+					.tl {
+						position: absolute;
+						width: 35%;
+						height: 35%;
+						top: 10%;
+						left: 10%;
+						background-color: #1C3A3A; //darkteal
+					}
+					.tr {
+						position: absolute;
+						width: 35%;
+						height: 35%;
+						top: 10%;
+						left: 55%;
+						background-color: #1C3A3A; //darkteal
+					}
+					.bl {
+						position: absolute;
+						width: 35%;
+						height: 35%;
+						top: 55%;
+						left: 10%;
+						background-color: #1C3A3A; //darkteal
+					}
+					.br {
+						position: absolute;
+						width: 35%;
+						height: 35%;
+						top: 55%;
+						left: 55%;
+						background-color: #1C3A3A; //darkteal
+					}
+				}
+			}
+		}
+	}
+}
+
+#window-2 {
+	background-color: #D4CCCA;
+
+	.frame {
+		position: absolute;
+		width: 20%;
+		height: 50%;
+		top: 25%;
+		background-color: #9D767B;
+
+		.top {
+			position: absolute;
+			width: 100%;
+			height: 40%;
+			.inner {
+				@include make-centered-rect-wh(80%,80%,#D4CCCA);
+
+				.inner-2 {
+					@include make-centered-rect-wh(80%,80%, transparent);
+					.triangle{
+						position: absolute;
+						width: 80%;
+						height: 40%;
+					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					    background-color: #999; 
+					    transform: rotate(180deg);
+					    left: 10%;
+					}
+
+					.triangle-2 {
+						position: absolute;
+						width: 80%;
+						height: 40%;
+					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					    background-color: #999; 
+					    left: 10%;
+					    bottom: 0%;
+					}
+
+					.triangle-3 {
+						position: absolute;
+						width: 80%;
+						height: 40%;
+					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					    background-color: #999; 
+					    left: -20%;
+					    top: 30%;
+					    transform: rotate(90deg);
+					}
+
+					.triangle-4 {
+						position: absolute;
+						width: 80%;
+						height: 40%;
+					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+					    background-color: #999; 
+					    right: -20%;
+					    top: 30%;
+					    transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+
+		.bottom {
+			position: absolute;
+			width: 100%;
+			top: 35%;
+			height: 65%;
+			.inner {
+				@include make-centered-rect-wh(80%,80%,#D4CCCA);
+
+				.inner-2 {
+					@include make-centered-rect-wh(80%,80%,transparent);
+
+					div {
+						width: 100%;
+						height: 5%;
+						margin-bottom: 10%;
+						background-color: #999;
+					}
+
+				}
+			}
+		}
+	}
+}

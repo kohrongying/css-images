@@ -2,6 +2,11 @@
 {
   "images": [
     {
+      "src": "img/windows.png",
+      "alt": "Windows of Singapore",
+      "link": "windows.html"
+    },
+    {
       "src": "img/fruits.png",
       "alt": "Fruits",
       "link": "fruits.html"
