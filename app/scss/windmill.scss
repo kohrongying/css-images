@@ -1,0 +1,184 @@
+$green: #b2c9ab;
+$mustard: #e8ddb5;
+$brown: #341c1c;
+$grey: #252323; 
+
+body, .my-container { 
+	background-color: #adfcf9!important;
+	height: 100vh;
+	width: 100vw;
+}
+
+.ground {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	bottom: 0;
+	background-color: $brown;
+
+	.tunnel {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		.vert-from-windmill {
+			position: absolute;
+			height: 50%;
+			width: 1.8%;
+			left: 21.6%;
+			background-color: grey;
+		}
+		.hort {
+			position: absolute;
+			height: 10%;
+			width: 56.8%;
+			left: 21.6%;
+			top: 50%;
+			background-color: grey;
+		}
+		.vert-to-home {
+			position: absolute;
+			height: 50%;
+			width: 1.8%;
+			right: 21.6%;
+			background-color: grey;
+		}
+	}
+}
+
+.windmill, .home {
+	position: absolute;
+	width: 35%;
+	height: 50%;
+}
+
+.windmill {
+	bottom: 30%;
+	left: 5%;
+
+	.tower {
+		position: absolute;
+		width: 5%;
+		height: 60%;
+		bottom: 0;
+		left: 47.5%;
+		background-color: $grey;
+		border-top-left-radius: 40%;
+		border-top-right-radius: 40%;
+	}
+
+	.rotor {
+		position: absolute;
+		width: 3%;
+		height: 5%;
+		top: 37.5%;
+		left: 48.5%;
+		border-radius: 50%;
+		background-color: $grey;
+	}
+
+	.blades {
+		position: absolute;
+		width: 280px;
+		height: 280px;
+		left: calc(50% - 140px);
+		border-radius: 50%;
+		animation: spin 2s linear infinite;
+
+		.blade-1 {
+			position: absolute;
+			width: 3%;
+			height: 50%;
+			border-radius: 40%;
+			left: 48.5%;
+			background-color: $grey;
+		}
+		.blade-2 {
+			position: absolute;
+			width: 3%;
+			height: 50%;
+			border-radius: 40%;
+			left: 26%;
+			top: 38%;
+			background-color: $grey;
+			transform: rotate(-120deg);
+		}
+		.blade-3 {
+			position: absolute;
+			width: 3%;
+			height: 50%;
+			border-radius: 40%;
+			right: 26%;
+			top: 38%;
+			background-color: $grey;
+			transform: rotate(120deg);
+		}		
+		
+	}
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.home {
+	bottom: 30%;
+	right: 5%;
+
+	.square {
+		position: absolute;
+		width: 40%;
+		height: 40.2%;
+		left: 20%;
+		bottom: 0;
+		background-color: $green;
+		.door {
+			position: absolute;
+			width: 30%;
+			height: 50%;
+			left: 35%;
+			bottom: 0;
+			background-color: $brown;
+			border-top-right-radius: 50%;
+			border-top-left-radius: 50%;
+		}
+	}
+	.triangle {
+		position: absolute;
+		width: 40%;
+		height: 30%;
+		left: 20%;
+		bottom: 40%;
+		background-color: $green;
+		clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+	}
+	.rect {
+		position: absolute;
+		width: 20%;
+		height: 40%;
+		right: 20%;
+		bottom: 0;
+		background-color: black;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+
+		.window {
+			width: 20%;
+			height: 30%;
+			background-color: white;
+		}
+	}
+	.parallelogram {
+		position: absolute;
+		width: 40%;
+		height: 30%;
+		right: 20%;
+		bottom: 40%;
+		background-color: black;
+		clip-path: polygon(0 0, 50% 0, 100% 100%, 50% 100%);
+	}
+}
