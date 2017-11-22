@@ -2,6 +2,11 @@
 {
   "images": [
     {
+      "src": "img/windmill.png",
+      "alt": "Windmill",
+      "link": "windmill.html"
+    },
+    {
       "src": "img/windows.png",
       "alt": "Windows of Singapore",
       "link": "windows.html"

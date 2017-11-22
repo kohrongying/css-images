@@ -91,18 +91,22 @@ body{
 		}
 		.seeds {
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 40%;
-			left: 35%;
+			width: 50%;
+			height: 50%;
+			top: 35%;
+			left: 25%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-content: space-around;
+			justify-content: space-around;
 
 			div {
-				width: 5%;
-				height: 5%;
+				width: 12%;
+				height: 12%;
 				border-radius: 50%;
 				background-color: $brown;
-				margin-bottom: 10%;
-				-webkit-box-reflect: right 400%;
+				margin-bottom: 20%;
 			}
 		}
 	}
@@ -148,12 +152,10 @@ body{
 					div:nth-child(1) {
 						@include make-seed-tl(20%, 30%);
 						transform: rotate(-40deg);
-						-webkit-box-reflect: right 200%;
 					}
 					div:nth-child(2) {
 						@include make-seed-tl(40%, 30%);
 						transform: rotate(-60deg);
-						-webkit-box-reflect: right 200%;
 					}
 					div:nth-child(3) {
 						@include make-seed-tl(60%, 30%);
