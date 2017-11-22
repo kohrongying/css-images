@@ -2,6 +2,8 @@ $green: #b2c9ab;
 $mustard: #e8ddb5;
 $brown: #341c1c;
 $grey: #252323; 
+$lightbrown: #aeb4a9;
+$orange: #ff934f;
 
 body, .my-container { 
 	background-color: #adfcf9!important;
@@ -14,7 +16,7 @@ body, .my-container {
 	width: 100%;
 	height: 30%;
 	bottom: 0;
-	background-color: $brown;
+	background-color: $lightbrown;
 
 	.tunnel {
 		position: absolute;
@@ -43,9 +45,29 @@ body, .my-container {
 			right: 21.6%;
 			background-color: grey;
 		}
+		.packet {
+			position: absolute;
+			height: 10%;
+			width: 1.8%;
+			left: 21.6%;
+			background-color: white;
+			border-radius: 50%;
+			animation: travel 3s linear infinite;
+		}
 	}
 }
 
+@keyframes travel {
+	25% {
+		transform: translate(0, 500%);
+	}
+	75% {
+		transform: translate(3060%, 500%);
+	}
+	100% {
+		transform: translate(3060%,0);
+	}
+}
 .windmill, .home {
 	position: absolute;
 	width: 35%;
@@ -140,7 +162,7 @@ body, .my-container {
 			height: 50%;
 			left: 35%;
 			bottom: 0;
-			background-color: $brown;
+			background-color: $grey;
 			border-top-right-radius: 50%;
 			border-top-left-radius: 50%;
 		}
@@ -160,7 +182,7 @@ body, .my-container {
 		height: 40%;
 		right: 20%;
 		bottom: 0;
-		background-color: black;
+		background-color: $grey;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -170,6 +192,7 @@ body, .my-container {
 			width: 20%;
 			height: 30%;
 			background-color: white;
+			animation: lightup 3s cubic-bezier(0,1,0,1) infinite;
 		}
 	}
 	.parallelogram {
@@ -178,7 +201,16 @@ body, .my-container {
 		height: 30%;
 		right: 20%;
 		bottom: 40%;
-		background-color: black;
+		background-color: $grey;
 		clip-path: polygon(0 0, 50% 0, 100% 100%, 50% 100%);
+	}
+}
+
+@keyframes lightup {
+	90% {
+		background-color: white;
+	}
+	100% {
+		background-color: $orange;
 	}
 }
