@@ -1,0 +1,337 @@
+$navy: #102542;
+$orange: #E49273;
+$sandy: #b3a394;
+$beige: #cdd7d6;
+$lightpurple : #bcc4db;
+$lightgreen: #a1c084;
+$lightnavy: #69a2b0; 
+$darkgrey: #393237;
+$red: #e05263;
+$whitish: #d3f3ee;
+$purple: #7180AC;
+$lightblue: #A8D0DB;
+$brown: #A37A74;
+
+body{ background-color: white!important;}
+.my-container {
+	min-height: 100vh;
+}
+
+.item {
+	position: absolute;
+	height: 60%;
+	width: 60%;
+	top: 20%;
+	left: 20%;
+	// border: 1px solid black;
+}
+
+@mixin set-grid($col-start,$col-end,$row-start,$row-end) {
+	grid-column-start: $col-start;
+	grid-column-end: $col-end;
+	grid-row-start: $row-start;
+	grid-row-end: $row-end;
+	position: relative;
+}
+.camera {
+	@include set-grid(1,3,1,3);
+	.item {
+		top:10%;
+	}
+	background-color: $navy;
+	.body {
+		position: absolute;
+		width: 80%;
+		height: 50%;
+		bottom: 0;
+		left: 10%;
+		background-color: $beige;
+		border-radius: 10px;
+
+		.middle {
+			position: absolute;
+			width: 100%;
+			height: 60%;
+			top: 20%;
+			background-color: $darkgrey;
+		}
+		.shutter-release {
+			position: absolute;
+			width: 15%;
+			height: 10%;
+			left: 10%;
+			top: -8%;
+			background-color: $beige;
+			border-radius: 10%;
+			.shutter-button {
+				position: absolute;
+				width: 60%;
+				height: 50%;
+				top: -50%;
+				left: 20%;
+				background-color: white;
+			}
+		}
+		.flash {
+			position: absolute;
+			width: 35%;
+			height: 35%;
+			top: -25%;
+			left: calc(65% / 2);
+			border-radius: 30%;
+			background-color: $beige;
+			.light {
+				position: absolute;
+				width: 60%;
+				height: 50%;
+				top: 20%;
+				left: 20%;
+				background-color: white;
+			}
+		}
+		.focus-light {
+			position: absolute;
+			width: 5%;
+			height: 8%;
+			border-radius: 50%;
+			top: 8%;
+			left: 5%;
+			background-color: $orange;
+		}
+		.lens {
+			position: absolute;
+			width: 50%;
+			height: 80%;
+			left: 25%;
+			top: 10%;
+			border-radius: 50%;
+			background-color: $darkgrey;
+			.inner-1 {
+				position: absolute;
+				width: 80%;
+				height: 80%;
+				border-radius: 50%;
+				top: 10%;
+				left: 10%;
+				background-color: lightgrey;
+				.inner-2 {
+					position: absolute;
+					width: 70%;
+					height: 70%;
+					top: 15%;
+					left: 15%;
+					border-radius: 50%;
+					background-color: $navy;
+				}
+
+			}
+		}
+	}
+
+}
+.suitcase {
+	@include set-grid(3,5,1,3);
+
+	background-color: $purple;
+	.body {
+		position: absolute;
+		width: 60%;
+		height: 80%;
+		bottom: 5%;
+		left: 20%;
+		background-color: $lightblue;
+		border-radius: 20px;
+		.pocket {
+			position: absolute;
+			width: 80%;
+			height: 60%;
+			bottom: 10%;
+			left: 10%;
+			background-color: $orange;
+			border-top: 10px solid $darkgrey;
+		}
+	}
+	.handle {
+		position: absolute;
+		width: 30%;
+		height: 30%;
+		left: 35%;
+		top: -5%;
+		border-radius: 20px;
+		border: 10px solid $lightblue;
+		border-top: 10px solid black;
+	}
+	.left-wheel {
+		position: absolute;
+		width: 8%;
+		height: 8%;
+		left: 30%;
+		bottom: 0;
+		border-radius: 50%;
+		background-color: $darkgrey;
+	}
+	.right-wheel {
+		position: absolute;
+		width: 8%;
+		height: 8%;
+		right: 30%;
+		bottom: 0;
+		border-radius: 50%;
+		background-color: $darkgrey;
+	}
+	.tag {
+		position: absolute;
+		width: 10%;
+		height: 20%;
+		top: 17%;
+		left: 58%;
+		background-color: white;
+		clip-path: polygon(50% 0%, 0% 36%, 0% 100%, 100% 100%, 100% 36%);
+
+	}
+}
+.passport {
+	@include set-grid(5,7,1,3);
+	.item {
+		top:10%;
+	}
+	background-color: $lightblue;
+	.ticket {
+		position: absolute;
+		width: 35%;
+		height: 90%;
+		top:20%;
+		left: 45%;
+		border-radius: 5%;
+		background-color: white;
+		transform: rotate(10deg);
+		.top-shaded {
+			position: absolute;
+			width: 20%;
+			height: 100%;
+			right: 0;
+			border-bottom-right-radius: 5%;
+			border-top-right-radius: 5%;
+			background-color: $purple;
+		}
+		.barcode {
+			position: absolute;
+			width: 60%;
+			height: 8%;
+			top: 5%;
+			left: 10%;
+			background-color: $beige;
+		}
+	}
+	.body {
+		position: absolute;
+		width: 40%;
+		height: 60%;
+		bottom: 0;
+		left: 30%;
+		border-radius: 10px;
+		background-color: $red;
+		.title {
+			position: absolute;
+			top: 20%;
+			left: 15%;
+			width: 100%;
+			text-transform: uppercase;
+			letter-spacing: 0.25em;
+			color: white;
+			font-size: small;
+		}
+	}
+}
+
+// height: 30vh;
+.toothbrush {
+	@include set-grid(1,4,3,4);
+
+	background-color: $orange;
+	.stick {
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		bottom: 0;
+		background-color: $darkgrey;
+		border-radius: 10px;
+	}
+	.bristles {
+		position: absolute;
+		width: 25%;
+		height: 30%;
+		bottom: 10%;
+		left: 2%;
+		border-bottom: 5px solid $orange;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+
+		div {
+			width: 5%;
+			height: 100%;
+			border-radius: 10px;
+			background-color: white; 
+		}
+	}
+}
+.sunglasses {
+	@include set-grid(4,7,3,4);
+
+	background-color: $brown;
+
+	.frame {
+		position: absolute;
+		width: 10%;
+		height: 5%;
+		top: 45%;
+		left: calc(90% / 2);
+		background-color: $navy;
+	}
+	.left-eye {
+		position: absolute;
+		width: 40%;
+		height: 80%;
+		left: 7%;
+		top: 20%;
+		background-color: $navy;
+		border-radius: 40% 40% 80% 50%; //top left then clockwise
+	}
+	.right-eye {
+		position: absolute;
+		width: 40%;
+		height: 80%;
+		right: 7%;
+		top: 20%;
+		background-color: $navy;
+		border-radius: 40% 40% 50% 80%; //top left then clockwise
+	}
+}
+@media all and (max-width: 500px) {
+	.my-container > .camera, .suitcase, .passport {
+		min-width: 100%;
+		height: 300px;
+	}
+	.toothbrush, .sunglasses {
+		height: 150px;
+	}
+}
+
+@media all and (min-width: 500px) and (max-width: 800px) {
+	.my-container > .camera, .suitcase, .passport {
+		min-width: 100%;
+		height: 500px;
+	}
+	.toothbrush, .sunglasses {
+		height: 350px;
+	}
+}
+
+@media all and (min-width: 800px) {
+	.my-container {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-auto-rows: 1fr;
+	}
+}

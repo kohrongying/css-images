@@ -2,6 +2,11 @@
 {
   "images": [
     {
+      "src": "img/travel.png",
+      "alt": "travel",
+      "link": "travel.html"
+    },
+    {
       "src": "img/windmill.png",
       "alt": "Windmill",
       "link": "windmill.html"
