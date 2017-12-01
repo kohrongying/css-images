@@ -1,5 +1,10 @@
+$teal: rgb(63,146,154);
+$blue-gray: rgb(85,98,119);
+$pink: #f7b1ab;
 body{ 
 	min-width: 100%;
+	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 @mixin make-centered-rect-wh($width, $height, $color) {
@@ -14,12 +19,12 @@ body{
 .window {
 	background-color: lightblue;
 	height: 100vh;
-	// padding: 20px 80px;
 }
 
 .window-title {
 	position: absolute;
-	width: 100%;
+	width: 80%;
+	left: 10%;
 	bottom: 10%;
 	p {
 		color: #ccc;
@@ -118,44 +123,31 @@ body{
 					@include make-centered-rect-wh(80%,80%, transparent);
 					.triangle{
 						position: absolute;
-						width: 80%;
-						height: 40%;
-					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+						width: 100%;
+						height: 100%;
 					    background-color: #999; 
-					    transform: rotate(180deg);
-					    left: 10%;
+					    clip-path: polygon(0% 5%, 0% 95%, 46.5% 50%);
 					}
-
 					.triangle-2 {
 						position: absolute;
-						width: 80%;
-						height: 40%;
-					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-					    background-color: #999; 
-					    left: 10%;
-					    bottom: 0%;
+						width: 100%;
+						height: 100%;
+					    background-color: #999;
+					    clip-path: polygon(5% 0%, 95% 0%, 50% 46.5%);
 					}
-
 					.triangle-3 {
 						position: absolute;
-						width: 80%;
-						height: 40%;
-					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+						width: 100%;
+						height: 100%;
 					    background-color: #999; 
-					    left: -20%;
-					    top: 30%;
-					    transform: rotate(90deg);
+					    clip-path: polygon(100% 5%, 100% 95%, 53.5% 50%);			
 					}
-
 					.triangle-4 {
 						position: absolute;
-						width: 80%;
-						height: 40%;
-					    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+						width: 100%;
+						height: 100%;
 					    background-color: #999; 
-					    right: -20%;
-					    top: 30%;
-					    transform: rotate(-90deg);
+					    clip-path: polygon(5% 100%, 95% 100%, 50% 53.5%);
 					}
 				}
 			}
@@ -183,4 +175,152 @@ body{
 			}
 		}
 	}
+}
+
+#window-3 {
+	background-color: $teal;
+	.frame {
+		position: absolute;
+		width: 40%;
+		height: 65%;
+		top: 20%;
+		left: 30%;
+		// border: 1px solid white;
+
+		.top {
+			background-color: $pink;
+			position: absolute;
+			width: 100%;
+			height: 20%;
+
+			.base-layer {
+				position: absolute;
+				width: 94%;
+				left: 3%;
+				height: 90%;
+				top: 5%;
+				display: grid;
+				grid-template-areas: "l1 tl tl tl tr tr tr r1"
+									 "l1 l2 t2 t2 t2 t2 r2 r1"
+									 "l1 l2 m1 m1 m1 m1 r2 r1"
+									 "l1 l2 b2 b2 b2 b2 r2 r1"
+									 "l1 bl bl bl bb bb bb r1";
+				grid-gap: 8px;
+				div {
+					background-color: $blue-gray;
+				}
+				.left-1 {
+					grid-area: l1;
+				}
+				.left-2 {
+					grid-area: l2;
+				}
+				.top-1-right {
+					grid-area: tr;
+				}
+				.top-1-left {
+					grid-area: tl;
+				}
+				.top-2 {
+					grid-area: t2;
+				}
+				.middle {
+					grid-area: m1;
+				}
+				.bottom-2 {
+					grid-area: b2;
+				}
+				.bottom-1-left {
+					grid-area: bl;
+				}
+				.bottom-1-right {
+					grid-area: bb;
+				}
+				.right-1 {
+					grid-area: r1;
+				}
+				.right-2 {
+					grid-area: r2;
+				}
+
+			}
+			
+		}
+		.bottom{
+			position: absolute;
+			width: 100%;
+			height: 80%;
+			bottom: 0;
+			.pane {
+				position: absolute;
+				width: 50%;
+				height: 100%;
+				border: 3px solid $blue-gray;
+
+				.upper {
+					position: absolute;
+					width: 80%;
+					left: 10%;
+					top: 5%;
+					height: 32.5%;
+					background-color: $pink;
+					padding: 10px;
+					.base-layer{
+						position: absolute;
+						width: 90%;
+						height: 90%;
+						left: 5%;
+						top: 5%;
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-template-rows: 1fr 1fr;
+						grid-gap: 8px;
+						div {
+							background-color: $blue-gray;
+						}
+					}
+					.second-layer {
+						position: absolute;
+						width: 50%;
+						height: 60%;
+						top: 20%;
+						left: 25%;
+						clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+						background-color: $pink;
+						.rhombus {
+							position: absolute;
+							width: 70%;
+							height: 70%;
+							top: 15%;
+							left: 15%;
+							clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+							background-color: $blue-gray;
+						}
+					}
+				}
+				.lower {
+					position: absolute;
+					width: 80%;
+					left: 10%;
+					bottom: 5%;
+					height: 52.5%;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+
+					div {
+						background-color: $pink;
+						
+						width: 100%;
+						height: 5%;
+					}
+				}
+			}
+			#pane-right {
+				right: 0;
+			}
+		}
+	}
+	
+	
 }
